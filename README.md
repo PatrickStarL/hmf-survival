@@ -16,6 +16,18 @@ For each case, prognostic signal is extracted from three heterogeneous evidence 
    - **Stage 2 (modality-level summarization)**: each modality is attention-pooled into a summary token; the three summary tokens plus a learnable CLS token are fed into a shallow Transformer (depth=2, heads=4) to produce the case-level joint representation.
 3. **Training objective**: Cox partial likelihood (primary supervision) plus a bidirectional histo-text InfoNCE contrastive loss (weight 0.002, temperature 0.07) to mitigate representation-scale discrepancy between the two independently pretrained foundation models (mSTAR, CONCH).
 
+![Design motivation: gaps in prior work vs. this design](assets/motivation.png)
+
+*Note: the diagram above frames two-stage hierarchical fusion as the intended fix for "flat concat wastes capacity." The [ablation results below](#results) show this specific hypothesis did not hold on this data -- flat single-stage co-attention matched or slightly outperformed the two-stage design. Kept here as a record of the original design rationale, not as a validated claim.*
+
+### WSI feature extraction (patch-level, frozen mSTAR encoder)
+
+![WSI to patch feature bag pipeline](assets/mil_pipeline.png)
+
+### PANTHER prototype tokenization
+
+![PANTHER: patch features to prototype statistics to prototype tokens](assets/panther_prototyping.png)
+
 ## Results
 
 All numbers below are computed directly from the raw per-fold/per-seed logs under `results/` (see `results/*/cv_summary_*.json` for the exact source). They are reported as-is, including where they do not favor this work.
