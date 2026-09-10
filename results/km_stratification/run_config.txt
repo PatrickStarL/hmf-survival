@@ -1,0 +1,13 @@
+generated_at_utc=2026-04-19 08:34:38 UTC
+datasets=STAD CRC KIRC LUAD HNSC
+folds=0 1 2 3 4
+target_col=dss_survival_days
+time_unit=years
+min_group_size=5
+generate_seed_plots=1
+generate_ensemble_plots=1
+generate_panel=1
+dpi=220
+method=Reuse mainline 5-seed x 5-fold test predictions; assemble seed-level OOF risk then 5-seed mean-risk ensemble OOF; perform KM plus log-rank on each cancer.
+official_display=5-seed mean-risk ensemble OOF KM plots for STAD CRC KIRC LUAD HNSC
+risk_split=median_ge_cutoff with balanced rank-median fallback when a group is too small

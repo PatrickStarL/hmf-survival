@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Model weights / checkpoints / caches (never commit)
+*.pt
+*.pth
+*.bin
+*.pkl
+*.h5
+*.ckpt
+.cache/
+
+# Large intermediate data (never commit)
+*.svs
+*.tiff
+feats_pt/
+reports_pt/
+
+# Logs, run artifacts
+*.log
+*.pid
+*.lock
+*.state
+logs/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

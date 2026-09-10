@@ -1,0 +1,132 @@
+{
+  "done_runs": 135,
+  "failed_runs": 29,
+  "skipped_runs": 1,
+  "all_rows": 165,
+  "overall": {
+    "n": 135,
+    "mean": 0.6728584012472744,
+    "std": 0.10168057147576941
+  },
+  "by_structure": [
+    {
+      "structure": "coattn_text",
+      "done": 45,
+      "fail": 0,
+      "skip": 0,
+      "n": 45,
+      "mean": 0.6846143970077044,
+      "std": 0.09290228570986717
+    },
+    {
+      "structure": "shallow_cls",
+      "done": 45,
+      "fail": 29,
+      "skip": 1,
+      "n": 45,
+      "mean": 0.6576115209022589,
+      "std": 0.10906294840769024
+    },
+    {
+      "structure": "twostage",
+      "done": 45,
+      "fail": 0,
+      "skip": 0,
+      "n": 45,
+      "mean": 0.6763492858318598,
+      "std": 0.10054052600649897
+    }
+  ],
+  "by_structure_dataset": [
+    {
+      "structure": "coattn_text",
+      "dataset": "CRC",
+      "done": 15,
+      "fail": 0,
+      "skip": 0,
+      "n": 15,
+      "mean": 0.7867006797956396,
+      "std": 0.062077617627129676
+    },
+    {
+      "structure": "coattn_text",
+      "dataset": "LUAD",
+      "done": 15,
+      "fail": 0,
+      "skip": 0,
+      "n": 15,
+      "mean": 0.6309471061454711,
+      "std": 0.06266327556200055
+    },
+    {
+      "structure": "coattn_text",
+      "dataset": "STAD",
+      "done": 15,
+      "fail": 0,
+      "skip": 0,
+      "n": 15,
+      "mean": 0.6361954050820026,
+      "std": 0.04965884951227751
+    },
+    {
+      "structure": "shallow_cls",
+      "dataset": "CRC",
+      "done": 15,
+      "fail": 0,
+      "skip": 0,
+      "n": 15,
+      "mean": 0.7666912384471262,
+      "std": 0.0672127802656382
+    },
+    {
+      "structure": "shallow_cls",
+      "dataset": "LUAD",
+      "done": 15,
+      "fail": 15,
+      "skip": 0,
+      "n": 15,
+      "mean": 0.6215067281810506,
+      "std": 0.06806002183301019
+    },
+    {
+      "structure": "shallow_cls",
+      "dataset": "STAD",
+      "done": 15,
+      "fail": 14,
+      "skip": 1,
+      "n": 15,
+      "mean": 0.5846365960786,
+      "std": 0.08948282099409137
+    },
+    {
+      "structure": "twostage",
+      "dataset": "CRC",
+      "done": 15,
+      "fail": 0,
+      "skip": 0,
+      "n": 15,
+      "mean": 0.7781150664077333,
+      "std": 0.0823939991611675
+    },
+    {
+      "structure": "twostage",
+      "dataset": "LUAD",
+      "done": 15,
+      "fail": 0,
+      "skip": 0,
+      "n": 15,
+      "mean": 0.6495798587251309,
+      "std": 0.05732648489692472
+    },
+    {
+      "structure": "twostage",
+      "dataset": "STAD",
+      "done": 15,
+      "fail": 0,
+      "skip": 0,
+      "n": 15,
+      "mean": 0.6013529323627154,
+      "std": 0.05960508185611803
+    }
+  ]
+}

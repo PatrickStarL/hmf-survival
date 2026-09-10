@@ -1,0 +1,27 @@
+start_utc=2026-04-18 18:34:20 UTC
+profile=P1_fusion_structure_compare_retained_mainline_3cancer
+notes=Strict formal P1 fusion-structure comparison for LUAD/STAD/CRC. All three structures run through the same twostage training entry and share the same retained-mainline preprocessing, pathway token compression, contrastive setup, and optimization protocol. The only intentional change is model_mm_type in {twostage_cls, coattn_text_twostage, cls_transformer_twostage}.
+structures=shallow_cls
+datasets=LUAD STAD
+seeds=1 7 13
+folds=0 1 2 3 4
+retry=1
+skip_existing=1
+prep_crc_alias=1
+num_workers=8
+target_col=dss_survival_days
+model_histo_type=PANTHER
+model_histo_config=PANTHER_default
+contrastive_pairs=histo_text
+force_gene_histo_contrastive=false
+use_gated_fusion=false
+use_path_qformer=false
+use_pathway_attnpool=true
+freeze_conch=true
+append_embed=random
+hparams=max_epochs=40,lr=0.0004,wd=1e-5,opt=adamW,lr_scheduler=cosine,warmup_epochs=1,batch_size=64,bag_size=16,train_bag_size=16,val_bag_size=0,es_min_epochs=5,es_patience=6,es_metric=loss,contrastive_weight=0.002,contrastive_temp=0.07,pathway_dropout=0.0,n_proto=32,pathway_token_count=16,vision_in_dim=1024,text_in_dim=512,path_proj_dim=256,tau=0.001,ot_eps=0.1,em_iter=1,cls_depth=2,cls_num_heads=4,cls_mlp_ratio=2.0,cls_dropout=0.1
+end_utc=2026-04-18 19:27:18 UTC
+total=30
+done=29
+skipped=1
+failed=0

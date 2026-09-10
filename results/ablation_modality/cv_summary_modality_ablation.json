@@ -1,0 +1,171 @@
+{
+  "done_runs": 180,
+  "failed_runs": 0,
+  "skipped_runs": 0,
+  "all_rows": 180,
+  "overall": {
+    "n": 180,
+    "mean": 0.6494662661911079,
+    "std": 0.09985647556090811
+  },
+  "by_ablation": [
+    {
+      "ablation": "full",
+      "done": 45,
+      "fail": 0,
+      "skip": 0,
+      "n": 45,
+      "mean": 0.6763492858318598,
+      "std": 0.10054052600649897
+    },
+    {
+      "ablation": "histo",
+      "done": 45,
+      "fail": 0,
+      "skip": 0,
+      "n": 45,
+      "mean": 0.6282483829428498,
+      "std": 0.0870423146925496
+    },
+    {
+      "ablation": "histo_rna",
+      "done": 45,
+      "fail": 0,
+      "skip": 0,
+      "n": 45,
+      "mean": 0.6716937290517064,
+      "std": 0.09308946460025842
+    },
+    {
+      "ablation": "histo_text",
+      "done": 45,
+      "fail": 0,
+      "skip": 0,
+      "n": 45,
+      "mean": 0.6215736669380157,
+      "std": 0.10530859412539513
+    }
+  ],
+  "by_ablation_dataset": [
+    {
+      "ablation": "full",
+      "dataset": "CRC",
+      "done": 15,
+      "fail": 0,
+      "skip": 0,
+      "n": 15,
+      "mean": 0.7781150664077333,
+      "std": 0.0823939991611675
+    },
+    {
+      "ablation": "full",
+      "dataset": "LUAD",
+      "done": 15,
+      "fail": 0,
+      "skip": 0,
+      "n": 15,
+      "mean": 0.6495798587251309,
+      "std": 0.05732648489692472
+    },
+    {
+      "ablation": "full",
+      "dataset": "STAD",
+      "done": 15,
+      "fail": 0,
+      "skip": 0,
+      "n": 15,
+      "mean": 0.6013529323627154,
+      "std": 0.05960508185611803
+    },
+    {
+      "ablation": "histo",
+      "dataset": "CRC",
+      "done": 15,
+      "fail": 0,
+      "skip": 0,
+      "n": 15,
+      "mean": 0.6969754551667682,
+      "std": 0.0889465222548222
+    },
+    {
+      "ablation": "histo",
+      "dataset": "LUAD",
+      "done": 15,
+      "fail": 0,
+      "skip": 0,
+      "n": 15,
+      "mean": 0.5825195696373198,
+      "std": 0.05151289160136231
+    },
+    {
+      "ablation": "histo",
+      "dataset": "STAD",
+      "done": 15,
+      "fail": 0,
+      "skip": 0,
+      "n": 15,
+      "mean": 0.6052501240244614,
+      "std": 0.06943037579235965
+    },
+    {
+      "ablation": "histo_rna",
+      "dataset": "CRC",
+      "done": 15,
+      "fail": 0,
+      "skip": 0,
+      "n": 15,
+      "mean": 0.7638287155658479,
+      "std": 0.0739604970924482
+    },
+    {
+      "ablation": "histo_rna",
+      "dataset": "LUAD",
+      "done": 15,
+      "fail": 0,
+      "skip": 0,
+      "n": 15,
+      "mean": 0.6163984626426128,
+      "std": 0.050651505837560055
+    },
+    {
+      "ablation": "histo_rna",
+      "dataset": "STAD",
+      "done": 15,
+      "fail": 0,
+      "skip": 0,
+      "n": 15,
+      "mean": 0.6348540089466586,
+      "std": 0.07111700134483981
+    },
+    {
+      "ablation": "histo_text",
+      "dataset": "CRC",
+      "done": 15,
+      "fail": 0,
+      "skip": 0,
+      "n": 15,
+      "mean": 0.7170190721458563,
+      "std": 0.09715592677296742
+    },
+    {
+      "ablation": "histo_text",
+      "dataset": "LUAD",
+      "done": 15,
+      "fail": 0,
+      "skip": 0,
+      "n": 15,
+      "mean": 0.6022578068364326,
+      "std": 0.06449950495506651
+    },
+    {
+      "ablation": "histo_text",
+      "dataset": "STAD",
+      "done": 15,
+      "fail": 0,
+      "skip": 0,
+      "n": 15,
+      "mean": 0.5454441218317585,
+      "std": 0.06626918045819116
+    }
+  ]
+}

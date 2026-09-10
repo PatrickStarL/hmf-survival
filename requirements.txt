@@ -1,0 +1,29 @@
+# Core
+torch>=2.1          # tested with 2.8.0 + CUDA 12.8
+numpy>=1.23
+pandas>=1.5
+scipy>=1.10
+scikit-learn>=1.2
+einops>=0.6
+h5py>=3.8
+tqdm>=4.65
+
+# Survival metrics (concordance_index_censored)
+scikit-survival>=0.22
+
+# Optimal transport (OT-based prototype/aggregator support)
+POT>=0.9
+
+# Prototype clustering (PANTHER). Optional: main_survival can fall back to
+# --mode kmeans (scikit-learn) if faiss is unavailable.
+faiss-cpu>=1.7        # or faiss-gpu, depending on your CUDA setup
+
+# Frozen vision/text foundation encoders (mSTAR / CONCH) and tokenizers
+transformers>=4.40
+
+# Result export / plotting (scripts/survival/export_*.py, run_p1_survival_stratification_5cancer.py)
+openpyxl>=3.1
+matplotlib>=3.7
+
+# Optional: only needed if you enable the graph-based MIL baseline in utils/utils.py
+# torch_geometric

@@ -1,0 +1,317 @@
+{
+  "total_rows": 125,
+  "done": 125,
+  "skip": 0,
+  "fail": 0,
+  "by_dataset": {
+    "CRC": {
+      "n": 25,
+      "mean_c_index_test": 0.7756624698050586,
+      "std_c_index_test": 0.07771106662563061,
+      "min_c_index_test": 0.6265060240963856,
+      "max_c_index_test": 0.907608695652174
+    },
+    "HNSC": {
+      "n": 25,
+      "mean_c_index_test": 0.5825366663883036,
+      "std_c_index_test": 0.056070009822938145,
+      "min_c_index_test": 0.48817567567567566,
+      "max_c_index_test": 0.6919866444073456
+    },
+    "KIRC": {
+      "n": 25,
+      "mean_c_index_test": 0.7545391959838562,
+      "std_c_index_test": 0.058992592985186186,
+      "min_c_index_test": 0.6325581395348837,
+      "max_c_index_test": 0.8534704370179949
+    },
+    "LUAD": {
+      "n": 25,
+      "mean_c_index_test": 0.6604081633727831,
+      "std_c_index_test": 0.05876361956511033,
+      "min_c_index_test": 0.5095846645367412,
+      "max_c_index_test": 0.7791666666666667
+    },
+    "STAD": {
+      "n": 25,
+      "mean_c_index_test": 0.5977320130698308,
+      "std_c_index_test": 0.07336261642860542,
+      "min_c_index_test": 0.39520958083832336,
+      "max_c_index_test": 0.7251908396946565
+    }
+  },
+  "by_dataset_seed": {
+    "CRC": {
+      "1": {
+        "n": 5,
+        "mean_c_index_test": 0.7776142231613385,
+        "std_c_index_test": 0.073553156956284
+      },
+      "13": {
+        "n": 5,
+        "mean_c_index_test": 0.8003600272897957,
+        "std_c_index_test": 0.075396186708432
+      },
+      "21": {
+        "n": 5,
+        "mean_c_index_test": 0.7787850228181378,
+        "std_c_index_test": 0.05392998350861359
+      },
+      "42": {
+        "n": 5,
+        "mean_c_index_test": 0.7594246309225329,
+        "std_c_index_test": 0.10400253364619398
+      },
+      "7": {
+        "n": 5,
+        "mean_c_index_test": 0.7621284448334882,
+        "std_c_index_test": 0.06561296455952421
+      }
+    },
+    "HNSC": {
+      "1": {
+        "n": 5,
+        "mean_c_index_test": 0.5826305192849105,
+        "std_c_index_test": 0.03702805962088605
+      },
+      "13": {
+        "n": 5,
+        "mean_c_index_test": 0.6115644303568215,
+        "std_c_index_test": 0.061182212836277006
+      },
+      "21": {
+        "n": 5,
+        "mean_c_index_test": 0.577875038474025,
+        "std_c_index_test": 0.06890571753417392
+      },
+      "42": {
+        "n": 5,
+        "mean_c_index_test": 0.5621285004000108,
+        "std_c_index_test": 0.05179659118222737
+      },
+      "7": {
+        "n": 5,
+        "mean_c_index_test": 0.57848484342575,
+        "std_c_index_test": 0.043321400039442334
+      }
+    },
+    "KIRC": {
+      "1": {
+        "n": 5,
+        "mean_c_index_test": 0.7476980555213939,
+        "std_c_index_test": 0.05357548666684445
+      },
+      "13": {
+        "n": 5,
+        "mean_c_index_test": 0.7355333447943423,
+        "std_c_index_test": 0.053269252664888724
+      },
+      "21": {
+        "n": 5,
+        "mean_c_index_test": 0.7489064940780613,
+        "std_c_index_test": 0.08109879429335144
+      },
+      "42": {
+        "n": 5,
+        "mean_c_index_test": 0.775128214719336,
+        "std_c_index_test": 0.043774252399727966
+      },
+      "7": {
+        "n": 5,
+        "mean_c_index_test": 0.7654298708061477,
+        "std_c_index_test": 0.04708735575421841
+      }
+    },
+    "LUAD": {
+      "1": {
+        "n": 5,
+        "mean_c_index_test": 0.64864602316662,
+        "std_c_index_test": 0.052803325419297206
+      },
+      "13": {
+        "n": 5,
+        "mean_c_index_test": 0.6488622760666517,
+        "std_c_index_test": 0.07776966755498735
+      },
+      "21": {
+        "n": 5,
+        "mean_c_index_test": 0.669513662002774,
+        "std_c_index_test": 0.036090558726660726
+      },
+      "42": {
+        "n": 5,
+        "mean_c_index_test": 0.651774678168249,
+        "std_c_index_test": 0.05258862565901192
+      },
+      "7": {
+        "n": 5,
+        "mean_c_index_test": 0.6832441774596208,
+        "std_c_index_test": 0.058402263738164734
+      }
+    },
+    "STAD": {
+      "1": {
+        "n": 5,
+        "mean_c_index_test": 0.5586638328236315,
+        "std_c_index_test": 0.10685796700515061
+      },
+      "13": {
+        "n": 5,
+        "mean_c_index_test": 0.6115197934560936,
+        "std_c_index_test": 0.04029006339496931
+      },
+      "21": {
+        "n": 5,
+        "mean_c_index_test": 0.571053874690219,
+        "std_c_index_test": 0.05183007631997613
+      },
+      "42": {
+        "n": 5,
+        "mean_c_index_test": 0.6147632234095654,
+        "std_c_index_test": 0.05750638257803978
+      },
+      "7": {
+        "n": 5,
+        "mean_c_index_test": 0.6326593409696446,
+        "std_c_index_test": 0.06274538432326368
+      }
+    }
+  },
+  "by_dataset_fold": {
+    "CRC": {
+      "0": {
+        "n": 5,
+        "mean_c_index_test": 0.8127272727272727,
+        "std_c_index_test": 0.009270944570168693
+      },
+      "1": {
+        "n": 5,
+        "mean_c_index_test": 0.8144329896907216,
+        "std_c_index_test": 0.027747943970015586
+      },
+      "2": {
+        "n": 5,
+        "mean_c_index_test": 0.7590361445783133,
+        "std_c_index_test": 0.07409611345059476
+      },
+      "3": {
+        "n": 5,
+        "mean_c_index_test": 0.6573333333333333,
+        "std_c_index_test": 0.019482185594936616
+      },
+      "4": {
+        "n": 5,
+        "mean_c_index_test": 0.8347826086956521,
+        "std_c_index_test": 0.05309423800791224
+      }
+    },
+    "HNSC": {
+      "0": {
+        "n": 5,
+        "mean_c_index_test": 0.519730510105871,
+        "std_c_index_test": 0.009983678521570689
+      },
+      "1": {
+        "n": 5,
+        "mean_c_index_test": 0.6120348376880443,
+        "std_c_index_test": 0.02102581317935037
+      },
+      "2": {
+        "n": 5,
+        "mean_c_index_test": 0.5386824324324324,
+        "std_c_index_test": 0.029800667824324813
+      },
+      "3": {
+        "n": 5,
+        "mean_c_index_test": 0.6126878130217028,
+        "std_c_index_test": 0.06382232004546003
+      },
+      "4": {
+        "n": 5,
+        "mean_c_index_test": 0.6295477386934674,
+        "std_c_index_test": 0.01894785573191473
+      }
+    },
+    "KIRC": {
+      "0": {
+        "n": 5,
+        "mean_c_index_test": 0.7493449781659389,
+        "std_c_index_test": 0.02558966868818098
+      },
+      "1": {
+        "n": 5,
+        "mean_c_index_test": 0.7021978021978023,
+        "std_c_index_test": 0.027081465771830814
+      },
+      "2": {
+        "n": 5,
+        "mean_c_index_test": 0.8021551724137931,
+        "std_c_index_test": 0.02447425787341102
+      },
+      "3": {
+        "n": 5,
+        "mean_c_index_test": 0.7051162790697675,
+        "std_c_index_test": 0.057407484299964104
+      },
+      "4": {
+        "n": 5,
+        "mean_c_index_test": 0.8138817480719794,
+        "std_c_index_test": 0.033462498910587085
+      }
+    },
+    "LUAD": {
+      "0": {
+        "n": 5,
+        "mean_c_index_test": 0.6575113808801214,
+        "std_c_index_test": 0.030941113386180115
+      },
+      "1": {
+        "n": 5,
+        "mean_c_index_test": 0.7425,
+        "std_c_index_test": 0.021491456815427447
+      },
+      "2": {
+        "n": 5,
+        "mean_c_index_test": 0.6671232876712329,
+        "std_c_index_test": 0.011299569497653247
+      },
+      "3": {
+        "n": 5,
+        "mean_c_index_test": 0.65790934320074,
+        "std_c_index_test": 0.009970171015953717
+      },
+      "4": {
+        "n": 5,
+        "mean_c_index_test": 0.576996805111821,
+        "std_c_index_test": 0.04316529224093972
+      }
+    },
+    "STAD": {
+      "0": {
+        "n": 5,
+        "mean_c_index_test": 0.5956989247311828,
+        "std_c_index_test": 0.05297486189316873
+      },
+      "1": {
+        "n": 5,
+        "mean_c_index_test": 0.5580310880829016,
+        "std_c_index_test": 0.030238832044383143
+      },
+      "2": {
+        "n": 5,
+        "mean_c_index_test": 0.5193612774451097,
+        "std_c_index_test": 0.06651709708851439
+      },
+      "3": {
+        "n": 5,
+        "mean_c_index_test": 0.646866485013624,
+        "std_c_index_test": 0.04541834667251148
+      },
+      "4": {
+        "n": 5,
+        "mean_c_index_test": 0.6687022900763359,
+        "std_c_index_test": 0.03910304877821587
+      }
+    }
+  }
+}

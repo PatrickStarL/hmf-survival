@@ -1,0 +1,27 @@
+start_utc=2026-04-18 09:23:07 UTC
+model_entry=python -m src.training.main_survival_cgfusion_qformer_mstar_conch_twostage
+profile=mainline_twostage_panther_mstar_conch_histotext
+notes=Official retained mainline: mSTAR WSI -> PANTHER -> 32 histology tokens -> token-level co-attention with CONCH report tokens and RNA 50->16 tokens -> per-modality attention pooling -> shallow CLS Transformer -> Cox. Q-Former and gated fusion are disabled. Contrastive alignment is retained for histo_text.
+datasets=STAD CRC KIRC LUAD HNSC
+seeds=1 7 13 21 42
+folds=0 1 2 3 4
+retry=1
+skip_existing=1
+num_workers=8
+target_col=dss_survival_days
+model_histo_type=PANTHER
+model_histo_config=PANTHER_default
+model_mm_type=twostage_cls
+use_path_qformer=false
+use_pathway_attnpool=true
+contrastive_pairs=histo_text
+force_gene_histo_contrastive=false
+use_gated_fusion=false
+freeze_conch=true
+append_embed=random
+hparams=max_epochs=40,lr=0.0004,wd=1e-5,opt=adamW,lr_scheduler=cosine,warmup_epochs=1,batch_size=64,bag_size=16,train_bag_size=16,val_bag_size=0,es_min_epochs=5,es_patience=6,es_metric=loss,contrastive_weight=0.002,contrastive_temp=0.07,pathway_dropout=0.0,n_proto=32,pathway_token_count=16,vision_in_dim=1024,text_in_dim=512,path_proj_dim=256,tau=0.001,ot_eps=0.1,em_iter=1,cls_depth=2,cls_num_heads=4,cls_mlp_ratio=2.0,cls_dropout=0.1
+end_utc=2026-04-18 13:10:08 UTC
+total=125
+done=125
+skipped=0
+failed=0
