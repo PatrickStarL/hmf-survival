@@ -64,6 +64,8 @@ Log-rank p < 0.01 (strongly significant) for KIRC, CRC, LUAD, STAD; HNSC reaches
 
 Raw result artifacts live under results/: mainline_5cancer/ (main protocol), ablation_modality/, ablation_structure/ (two ablation studies), and km_stratification/ (KM curves, log-rank tests, figures and tables). Every number in this section can be recomputed from those files.
 
+Note: the [official PS3 code release](https://github.com/manahilr/PS3) does not itself include a `results/`/`logs/` directory, stored checkpoints, or any result CSV/JSON that could be checked against its own paper's tables -- the PS3 row above is transcribed from the published paper, not reproduced from artifacts in that repo. This repository's `results/` directory, by contrast, ships the full raw per-fold/per-seed logs behind every number reported here.
+
 [1] Raza et al., *PS3: A Multimodal Transformer Integrating Pathology Reports with Histology Images and Biological Pathways for Cancer Survival Prediction*, ICCV 2025. [arXiv:2509.20022](https://arxiv.org/abs/2509.20022)
 
 ## Repository Layout
