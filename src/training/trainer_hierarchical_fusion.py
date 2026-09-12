@@ -59,7 +59,7 @@ from src.utils.utils import (EarlyStopping, save_checkpoint, AverageMeter, safe_
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-PROTO_MODELS = ['PANTHER', 'OT', 'H2T', 'ProtoCount']
+PROTO_MODELS = ['PANTHER']
 
 def train(datasets, args):
     """

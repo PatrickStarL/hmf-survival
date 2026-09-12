@@ -11,9 +11,6 @@ tqdm>=4.65
 # Survival metrics (concordance_index_censored)
 scikit-survival>=0.22
 
-# Optimal transport (OT-based prototype/aggregator support)
-POT>=0.9
-
 # Prototype clustering (PANTHER). Optional: main_survival can fall back to
 # --mode kmeans (scikit-learn) if faiss is unavailable.
 faiss-cpu>=1.7        # or faiss-gpu, depending on your CUDA setup

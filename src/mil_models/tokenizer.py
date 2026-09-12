@@ -16,15 +16,7 @@ class PrototypeTokenizer(nn.Module):
 
     def forward(self, X):
         n_samples = X.shape[0]
-        if self.model_type == 'OT':
-            if self.out_type == 'allcat':
-                prob = 1 / self.p * torch.ones((n_samples, self.p))
-                mean = X.reshape(n_samples, self.p, -1)
-                cov = None
-            else:
-                raise NotImplementedError(f"Not implemented for {self.out_type}")
-
-        elif self.model_type == 'PANTHER':
+        if self.model_type == 'PANTHER':
             if self.out_type == 'allcat' or self.out_type == 'weight_param_cat':
                 d = (X.shape[1] - self.p) // (2 * self.p)
                 prob = X[:, : self.p]

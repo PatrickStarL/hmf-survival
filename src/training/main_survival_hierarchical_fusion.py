@@ -29,7 +29,7 @@ import json
 
 from src.wsi_datasets.dataset_utils import collate_fn
 from src.wsi_datasets.wsi_survival import WSIOmicsTextSurvivalDataset
-PROTO_MODELS = ['PANTHER', 'OT', 'H2T', 'ProtoCount']
+PROTO_MODELS = ['PANTHER']
 
 PROJECT_ROOT = os.path.normpath(os.path.join(os.path.dirname(__file__), '..', '..'))
 DEFAULT_SPLIT_DIR = os.path.join(PROJECT_ROOT, 'src', 'splits', 'tcga-coadread', 'TCGA_COADREAD_overall_survival_k=4')
@@ -227,10 +227,10 @@ parser.add_argument('--es_metric', type=str, default='loss',
                     help='early stopping metric')
 
 ### model args ###
-parser.add_argument('--model_histo_type', type=str, choices=['H2T', 'OT', 'PANTHER', 'ProtoCount', 'MIL'],
-                    default='MIL', help='type of histology model')
+parser.add_argument('--model_histo_type', type=str, choices=['PANTHER', 'MIL'],
+                    default='PANTHER', help='type of histology model')
 parser.add_argument('--ot_eps', default=0.1, type=float,
-                    help='Strength for entropic constraint regularization for OT')
+                    help='PANTHER entropic constraint strength (Sinkhorn regularization in prototype EM fitting)')
 parser.add_argument('--model_histo_config', type=str,
                     default='PANTHER_default', help="name of model config file")
 parser.add_argument('--n_fc_layers', type=int, default=0)
@@ -355,12 +355,12 @@ parser.add_argument('--tags', nargs='+', type=str, default=None,
                     help='tags for logging')
 
 parser.add_argument('--wandb_project', default='mmp_final')
-args = parser.parse_args()
 
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 if __name__ == "__main__":
+    args = parser.parse_args()
 
     print('task: ', args.task)
     args.split_dir = resolve_existing_path(

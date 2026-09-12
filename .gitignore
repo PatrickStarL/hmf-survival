@@ -2,6 +2,7 @@
 __pycache__/
 *.pyc
 *.pyo
+.pytest_cache/
 
 # Model weights / checkpoints / caches (never commit)
 *.pt

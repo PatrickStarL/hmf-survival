@@ -4,12 +4,7 @@ import torch
 from os.path import join as j_
 
 from src.mil_models.model_PANTHER import PANTHER
-from src.mil_models.model_h2t import H2T
-from src.mil_models.model_protocount import ProtoCount
-from src.mil_models.model_configs import PANTHERConfig, ProtoCountConfig, H2TConfig
-# OT/OTConfig depend on an optional third-party optimal-transport submodule that
-# is not vendored in this repo (the released mainline only uses model_type='PANTHER').
-# They are imported lazily below, only if model_type == 'OT' is actually requested.
+from src.mil_models.model_configs import PANTHERConfig
 from src.mil_models.models.text_baseline import DAttention_Text
 from src.mil_models.model_multimodal_hierarchical_fusion import coattn_text_twostage
 from src.utils.file_utils import save_pkl, load_pkl
@@ -56,18 +51,6 @@ def create_embedding_model(args, mode='classification', config_dir=None):
         update_dict.update({'out_type': args.out_type})
         config = PANTHERConfig.from_pretrained(config_path, update_dict=update_dict)
         model = PANTHER(config=config, mode=mode)
-    elif model_type == 'OT':
-        from src.mil_models.model_OT import OT
-        from src.mil_models.model_configs import OTConfig
-        update_dict.update({'out_type': args.out_type})
-        config = OTConfig.from_pretrained(config_path, update_dict=update_dict)
-        model = OT(config=config, mode=mode)
-    elif model_type == 'H2T':
-        config = H2TConfig.from_pretrained(config_path, update_dict=update_dict)
-        model = H2T(config=config, mode=mode)
-    elif model_type == 'ProtoCount':
-        config = ProtoCountConfig.from_pretrained(config_path, update_dict=update_dict)
-        model = ProtoCount(config=config, mode=mode)
     else:
         raise NotImplementedError(f"Not implemented for {model_type}!")
 
@@ -158,10 +141,6 @@ def prepare_emb(datasets, args, mode='classification'):
     if model_type == 'PANTHER':
         PANTHER_kwargs = {'tau': args.tau, 'out_type': args.out_type, 'eps': args.ot_eps, 'em_step': args.em_iter}
         name = '_{out_type}_em_{em_step}_eps_{eps}_tau_{tau}'.format(**PANTHER_kwargs)
-        fpath += name
-    elif model_type == 'OT':
-        OT_kwargs = {'out_type': args.out_type, 'eps': args.ot_eps}
-        name = '_{out_type}_eps_{eps}'.format(**OT_kwargs)
         fpath += name
     embeddings_fpath = j_(args.split_dir, 'embeddings', fpath + '.pkl')
 

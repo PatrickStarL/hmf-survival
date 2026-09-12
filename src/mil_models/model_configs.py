@@ -59,28 +59,6 @@ class ABMILConfig(PretrainedConfig):
     dropout: float = 0.25
 
 @dataclass
-class OTConfig(PretrainedConfig):
-    in_dim: int = 512
-    n_classes: int = 2
-    n_filters: int = 2048
-    len_motifs: int = 1
-    subsamplings: int = 1
-    kernel_args: int = 0.4
-    weight_decay: float = 0.0001
-    ot_eps: float = 3.0
-    heads: int = 1
-    out_size: int = 3
-    out_type: str = 'param_cat'
-    max_iter: int = 100
-    distance: str = 'euclidean'
-    fit_bias: bool = False
-    alternating: bool = False
-    load_proto: bool = True
-    proto_path: str = '.'
-    fix_proto: bool = True
-
-
-@dataclass
 class PANTHERConfig(PretrainedConfig):
     in_dim: int = 512
     n_classes: int = 2
@@ -97,24 +75,6 @@ class PANTHERConfig(PretrainedConfig):
     proto_path: str = '.'
     fix_proto: bool = True
 
-
-@dataclass
-class ProtoCountConfig(PretrainedConfig):
-    in_dim: int = 512
-    n_classes: int = 2
-    out_size: int = 3
-    load_proto: bool = True
-    proto_path: str = '.'
-    fix_proto: bool = True
-
-@dataclass
-class H2TConfig(PretrainedConfig):
-    in_dim: int = 512
-    n_classes: int = 2
-    out_size: int = 3
-    load_proto: bool = True
-    proto_path: str = '.'
-    fix_proto: bool = True
 
 @dataclass
 class LinearEmbConfig(PretrainedConfig):

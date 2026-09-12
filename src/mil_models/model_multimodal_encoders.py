@@ -287,7 +287,7 @@ class coattn_text(nn.Module):
             modality: ['gene','histo','coattn', 'partial'] 'coattn' accounts for both modalities
                 If 'histo' or 'gene', unimodal self-attention
             histo_agg: ['mean', 'cat'] Take average of post-attention embeddings ('mean') or concatenate ('cat')
-            histo_model: ['mil','PANTHER', 'OT', 'H2T']: 'mil' is for non-prototype-based methods
+            histo_model: ['mil','PANTHER']: 'mil' is for non-prototype-based methods
             net_indiv (bool): If True, create FFN for each prototype
             numOfproto: Number of histology prototypes
         """
@@ -563,7 +563,7 @@ class coattn_text(nn.Module):
     def forward_no_loss(self, x_path, x_omics, x_text, return_attn=False):
         """
         Args:
-            x_path: (B, numOfproto, in_dim) in_dim = [prob, mean, cov] (If OT, prob will be uniform, cov will be none)
+            x_path: (B, numOfproto, in_dim) in_dim = [prob, mean, cov] (PANTHER prototype statistics)
             x_omics:
             return_attn:
 
